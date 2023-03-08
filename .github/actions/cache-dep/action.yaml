@@ -1,0 +1,14 @@
+name: 'Get & cache dependancy'
+description: 'Get dependancy'
+runs:
+  using: 'composite'
+  steps:
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+          path: ~/.npm
+          key: npm-deps-${{ hashFiles('**/package-lock.json') }}
+    - name: Install dependencies
+      run: npm ci
+      shell: bash
+   
