@@ -8,8 +8,6 @@ on:
 env: 
   MONGODB_DB_NAME: gha-demo
 jobs:
-  lint:
-   
   test:
     environment: testing
     env:
