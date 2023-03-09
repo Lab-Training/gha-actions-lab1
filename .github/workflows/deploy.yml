@@ -1,22 +1,14 @@
-name: CI-Integration
+name: CI-Deployment
 on:
   push:
     branches:
       - main
       - dev
       - feature/ac
+  workflow_dispatch:
 env: 
   MONGODB_DB_NAME: gha-demo
 jobs:
-  lint: 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
-      - name: Load dependancy
-        uses: ./.github/actions/cache-dep
-      - name: Lint code
-        run: npm run lint
   test:
     environment: testing
     env:
