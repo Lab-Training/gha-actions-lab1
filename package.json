@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "npx playwright test",
-    "lint": "eslint --ext .jsx --fix src",
+    "lint": "eslint --ext .jsx --fix src"
   },
   "keywords": [],
   "author": "",
